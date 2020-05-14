@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.mysedan.application.limonet.control.web.MainServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProxyServlet</servlet-name>
+        <servlet-class>com.mysedan.application.limonet.control.web.ProxyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GroupSmartServlet</servlet-name>
+        <servlet-class>com.mysedan.application.limonet.control.web.GroupSmartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewServlet</servlet-name>
+        <servlet-class>com.mysedan.application.limonet.view.ViewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.mysedan.application.limonet.control.web.UploadServlet</servlet-class>
+    </servlet>
+
+<!-- Splash Page starts : Uncomment these three servlet mappings and comment the remaining below this block
+	<servlet-mapping>
+        <servlet-name>ProxyServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/internal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewServlet</servlet-name>
+        <url-pattern>/template</url-pattern>
+    </servlet-mapping> Splash Page ends-->
+	
+	<servlet-mapping>
+        <servlet-name>GroupSmartServlet</servlet-name>
+        <url-pattern>/public/GroupSmartServlet</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>GroupSmartServlet</servlet-name>
+        <url-pattern>/public/GroupSmartServlet/authenticate</url-pattern>
+    </servlet-mapping>
+	
+   <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/public/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/er/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/incircle/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/ejm/*</url-pattern>
+    </servlet-mapping>
+	
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+	
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/internal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/affiliate/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProxyServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>
+        <servlet-name>ViewServlet</servlet-name>
+        <url-pattern>/template</url-pattern>
+    </servlet-mapping>
+    <!--servlet>
+        <servlet-name>MaintenanceServlet</servlet-name>
+        <servlet-class>com.mysedan.application.limonet.control.web.MaintenanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintenanceServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping-->
+	<session-config>
+		<session-timeout>720</session-timeout>	
+	</session-config>
+</web-app>

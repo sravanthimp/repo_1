@@ -1,0 +1,257 @@
+Equivalence Partitioning:
+
+In this method the input domain data is divided into different equivalence data classes. This method is typically used to reduce the total number of test cases to a finite set of testable test cases, still covering maximum requirements.
+
+In short it is the process of taking all possible test cases and placing them into classes. One test value is picked from each class while testing.
+
+E.g.: If you are testing for an input box accepting numbers from 1 to 1000 then there is no use in writing thousand test cases for all 1000 valid input numbers plus other test cases for invalid data.
+
+Using equivalence partitioning method above test cases can be divided into three sets of input data called as classes. Each test case is a representative of respective class.
+
+So in above example we can divide our test cases into three equivalence classes of some valid and invalid inputs.
+
+Test cases for input box accepting numbers between 1 and 1000 using Equivalence Partitioning:
+1) One input data class with all valid inputs. Pick a single value from range 1 to 1000 as a valid test case. If you select other values between 1 and 1000 then result is going to be same. So one test case for valid input data should be sufficient.
+
+2) Input data class with all values below lower limit. I.e. any value below 1, as a invalid input data test case.
+
+3) Input data with any value greater than 1000 to represent third invalid input class.
+
+So using equivalence partitioning you have categorized all possible test cases into three classes. Test cases with other values from any class should give you the same result.
+
+We have selected one representative from every input class to design our test cases. Test case values are selected in such a way that largest number of attributes of equivalence class can be exercised.
+
+Equivalence partitioning uses fewest test cases to cover maximum requirements.
+
+Boundary value analysis:
+
+It’s widely recognized that input values at the extreme ends of input domain cause more errors in system. More application errors occur at the boundaries of input domain. ‘Boundary value analysis’ testing technique is used to identify errors at boundaries rather than finding those exist in center of input domain.
+
+Boundary value analysis is a next part of Equivalence partitioning for designing test cases where test cases are selected at the edges of the equivalence classes.
+
+Test cases for input box accepting numbers between 1 and 1000 using Boundary value analysis:
+1) Test cases with test data exactly as the input boundaries of input domain i.e. values 1 and 1000 in our case.
+
+2) Test data with values just below the extreme edges of input domains i.e. values 0 and 999.
+
+3) Test data with values just above the extreme edges of input domain i.e. values 2 and 1001.
+
+Boundary value analysis is often called as a part of stress and negative testing.
+
+Note: There is no hard-and-fast rule to test only one value from each equivalence class you created for input domains. You can select multiple valid and invalid values from each equivalence class according to your needs and previous judgments.
+
+E.g. if you divided 1 to 1000 input values in valid data equivalence class, then you can select test case values like: 1, 11, 100, 950 etc. Same case for other test cases having invalid data classes.
+
+Black box testing?
+Advantages of Black Box Testing
+- Tester can be non-technical.
+- Used to verify contradictions in actual system and the specifications.
+- Test cases can be designed as soon as the functional specifications are complete
+
+Disadvantages of Black Box Testing
+- The test inputs needs to be from large sample space.
+- It is difficult to identify all possible inputs in limited testing time. So writing test cases is slow and difficult
+- Chances of having unidentified paths during this testing
+
+what is tracebility matrix?
+ this matrix defines the mapping between customer requirements and prepared testcases by testengineers.this matrix is requirements traceability matrix or requirements validation matrix.this is used by testing team to verify how far the testcases prepared have covered the requirements of the functionalities to be tested.
+
+the use of this is to check whether we have covered all the test cases or not.
+
+The concept of Traceability Matrix is to be able to trace from top level requirements to implementation, and from top level requirements to test.
+Traceability Matrix is a document used for tracking the requirement, Test cases and the defect. This document is prepared to make the clients satisfy that the coverage done is complete as end to end, This document consists of Requirement/Base line doc Ref No., Test case/Condition, Defects/Bug id. Using this document the person can track the Requirement based on the Defect id.
+
+A traceability matrix is a table that traces a requirement to the tests that are needed to verify that the requirement is fulfilled. A good traceability matrix will provide backward and forward traceability, i.e. a requirement can be traced to a test and a test to a requirements. The matrix links higher level requirements, design specifications, test requirements, and code files. It acts as a map, providing the links necessary for determining where information is located. This is also known as Requirements Traceability Matrix or RTM.
+
+This is mostly used for QA so that they can ensure that the customer gets what they requested. The Traceability matrix also helps the developer find out why some code was implemented the way it was, by being able to go from code to Requirements. If a test fails, it is possible to use the traceability matrix to see what requirements and code the test case relates to.
+
+The goal of a matrix of this type is -
+1. To make sure that the approved requirements are addressed/covered in all phases of development: From SRS to Development to Testing to Delivery.
+2. That each document should be traceable: Written test cases should be traceable to its requirement specification. If there is new version then updated testcases should be traceable with that.
+
+
+What is the need for Requirements Traceability Matrix in Software Testing?
+Automation requirement in an organization initiates it to go for a custom built Software. The client who had ordered for the product specifies his requirements to the development Team and the process of Software Development gets started. 
+
+
+In addition to the requirements specified by the client, the development team may also propose various value added suggestions that could be added on to the software. But maintaining a track of all the requirements specified in the requirement document and checking whether all the requirements have been met by the end product is a cumbersome and a laborious process.
+
+The remedy for this problem is the Requirements Traceability Matrix.
+
+What is Requirements Traceability Matrix in Software Testing?
+Requirements tracing is the process of documenting the links between the user requirements for the system you're building and the work products developed to implement and verify those requirements. These work products include Software requirements, design specifications, Software code, test plans and other artifacts of the systems development process. Requirements tracing helps the project team to understand which parts of the design and code implement the user's requirements, and which tests are necessary to verify that the user's requirements have been implemented correctly.
+Requirements Traceability Matrix Document is the output of Requirements Management phase of SDLC. 
+
+Requirements Traceability Matrix Template Instructions:
+
+Introduction
+This document presents the requirements traceability matrix (RTM) for the Project Name [workspace/workgroup] and provides traceability between the [workspace/workgroup] approved requirements, design specifications, and test scripts. 
+The table below displays the RTM for the requirements that were approved for inclusion in [Application Name/Version]. The following information is provided for each requirement:
+1.	Requirement ID
+2.	Risks
+3.	Requirement Type (User or System)
+4.	Requirement Description
+5.	Trace to User Requirement/Trace From System Requirement
+6.	Trace to Design Specification
+7.	UT * Unit Test Cases
+8.	IT * Integration Test Cases
+9.	ST * System Test Cases
+10.	UAT * User Acceptance Test Cases
+11.	Trace to Test Script 
+
+
+STLC..............
+  it contains 6 phases
+1.test planning
+2.test developement
+3.test execution
+4.result analysis
+5.bug tracking
+6.reporting
+
+1.TEST PLANNING
+Testplan document is prepared by the test lead.in the test planning first of all 
+ 1.the purpose of the document is clearly discribed.
+ 2.the list of all the features that are to be tested and the list of all the features that are not to be tested will be clearly mentioned here.
+       a.out o scope features
+       b.low risk features
+       c.the functionalities that are planned to be incorporated in future
+       d.the features that are to be skipped based on the time constraint
+3.test stratagy,levels of testing,types of testing,test design techniques(BVA,ECP),test metrics,acceptance critiria,test deliverable,test environment,resource planning,scheduling,staffing&traing,risks&contingencies(solution plan),approval information will be clearly mentioned in test planning.
+
+Test Strategy: -
+
+	Test strategy is defined as an organizational level term, which is used for testing all the projects in the organization.
+
+Test Plan: -
+	It is defined as a project level term, which is used for testing a particular project in the organization.
+
+Note: - Test strategy is common for all the projects but the test plan is specific for a particular project
+
+Test Metrics: -
+	The list of all the metrics that are maintained in that company will be listed out here in this section
+
+Acceptance Criteria: -
+	When to stop testing feeling that enough testing has been done on the application is clearly described here in this section.
+
+Suspension Criteria: -
+	When to suspend testing suddenly (abruptly) will be clearly mentioned here in this section.
+
+Test Deliverable: -
+
+	The list of all the documents that are to be prepared during the testing phase will be listed out here in this section.
+Eg: Test case, defects profile document.
+
+Test Environment: -
+
+	The customer specified environment would be clearly described here in this section. The same environment will be simulated in the company and will be used for testing purpose.
+
+Resource Planning: -
+
+	Who has to do what is clearly described here in this section.
+
+Scheduling: -
+
+	The starting dates and the ending data of the each and every tasks is clearly planned here in this section.
+
+Staffing& Training: -
+
+	How much staff is to be recruited and what kind of training is to be provided is clearly described here in this section.
+
+Risks & contingencies (Solution Plans): -
+
+	The list of all the potential risks and the corresponding solution plans will be listed out here in this section.
+
+Example:
+
+Risks:
+i.	Unable to deliver the soft ware with in dead lines.
+ii.	Employees may leave the organization in the middle of the project
+iii.	Customer may impose the dead lines.
+iv.	Unable to test all the features with in the time.
+v.	Lack of expatriation
+
+
+Contingencies (solution Plans):
+
+i.	Proper plan insurance.
+ii.	Employees need to be maintained on the bench.
+iii.	What not to be tested has to be planned in case of imposed dead lines.
+iv.	Severity & Priority based testing.
+v.	Proper Training needs to be provided. 
+
+ Assumptions: -
+	
+	The list of all the assumptions that are to be assumed by the test engineer will be listed out here in this section.
+
+Approval Information: -
+
+	Who has to approve what is clearly described here in this section.	
+
+2.TEST DEVELOPEMENT
+ in test developement we develope a use cases by based on FRS,HLI,LLI.
+use case:use case is description of functionali of certain features of application in terms of actors,actions & responces.
+  screen shots,template,functional requirement and special requirements are required for preparing the use case document.
+
+use case template:
+name of use case:
+brief discription of use case:
+actor's involved:
+special requrements:
+pre condition:
+post condition:
+flow of events:
+
+special reqirments are 2 types:1.explicit
+                               2.implicit
+1.the requirements that are directly given by the customer
+2.the req that are analyzed by the BA feeling that they will add  the value to the application.
+
+fonctional point:the point where an user can perform some action
+
+next we prepare a test cases:they are 2 types of test cases
+               1.gui test cases
+               2.functional test cases
+functional test cases are 2types:1.positive
+                                 2.negative
+test case template:
+1.test objective:the main purpose of the document 
+2.test secnario:the list of all secnarios that are to be tested will be listed out here in this section.
+3.test procedure:it is a functional level term which discribes how to perform a testing on functionalities of the application.the plan for testing the functionalities is briefly discribed here.
+4.test data:the data that is required for testing is made available here.
+
+
+3. Test Execution : Execute the test cases and record actual
+behaviour of the application.
+
+4. Result Analysis : Compare Actual and Expected behaviour
+of application if both are matched consider test case pass
+otherwise test case is failed.
+
+5. Bug Tracking : Consider all failed test cases as defects
+and track them in a separate doc that is called as defect
+profile doc.
+
+6. Defect Reporting : Defect profile doc is send to PM and
+Developer for the purpose of rectification.
+
+deffect profile template:
+deffect discription:what exactly the deffect is clearly discribed here
+steps for reproduciblity:the list of all the steps that are folowed by the testengineer to identify the diffects will be lisetd out here
+submitter:the name of the test engineer who has submitted the defects will mentioned here
+date submission:the date on which the deffect is submitted mentioned here
+version number:corresponding version number will be mentioned here
+build number:corrsponding build number will be mentioned here
+assigned to:the development lead will fil the the developers name for whom the deffects is assigned.
+
+Environment?
+Presentation Logic: The logic that is used for viewing application is known as presentation logic
+
+Business Logic: - The logic that is used for performing the operations on the application is known as business logic.
+
+Data Base Logic: - The logic that is used for storing and retrieving the data is known as database logic.
+
+
+
+
+
